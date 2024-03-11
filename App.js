@@ -17,11 +17,11 @@ function App() {
   } else if (mode === "SIGNIN") {
     content = <SignIn setMode={setMode} />;
   } else if (mode === "CONTENT") {
-    content = <Content />;
+    content = <Content user={user} setMode={setMode} />;
   } else if (mode === "ADMIN") {
     content = <Admin setMode={setMode} />;
   } else if (mode === "MYINFO") {
-    content = <MyInfo setMode={setMode} setUser={setUser} user={user} />;
+    content = <MyInfo user={user} />;
   }
 
   return (
